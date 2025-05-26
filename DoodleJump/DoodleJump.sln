@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoodleJump", "DoodleJump.csproj", "{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66072A43-D359-4E0E-985C-E56991CD3D32}
+	EndGlobalSection
+EndGlobal
