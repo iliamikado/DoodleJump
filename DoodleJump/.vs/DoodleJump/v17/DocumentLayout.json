@@ -1,35 +1,35 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\",
+  "WorkspaceRootPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\core\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Core\\Teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\core\\world.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\core\\platformmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}|DoodleJump.csproj|c:\\users\\iliam\\source\\repos\\doodlejump\\gamepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}|DoodleJump.csproj|c:\\users\\iliam\\source\\repos\\doodlejump\\doodlejump\\gamepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}|DoodleJump.csproj|solutionrelative:gamepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\core\\basicplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\core\\iplatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\core\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}|DoodleJump.csproj|c:\\users\\iliam\\source\\repos\\doodlejump\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}|DoodleJump.csproj|c:\\users\\iliam\\source\\repos\\doodlejump\\doodlejump\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8FE363E-480B-43AA-9C4D-089BE8BC3C72}|DoodleJump.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2CC0FB-BB77-4FD1-8139-2565B2ADD890}|..\\Model\\Model.csproj|c:\\users\\iliam\\source\\repos\\model\\model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Core\\BasicPlatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Core\\World.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Core\\PlatformManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Core\\IPlatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Core\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,57 +50,55 @@
               "DocumentIndex": 0,
               "Title": "Teleport.cs",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\Teleport.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Core\\Teleport.cs",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Core\\Teleport.cs",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\Teleport.cs",
-              "RelativeToolTip": "..\\Model\\Core\\Teleport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\Model\\Core\\Teleport.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T10:35:21.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T10:35:21.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "BasicPlatform.cs",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\BasicPlatform.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Core\\BasicPlatform.cs",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Core\\BasicPlatform.cs",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\BasicPlatform.cs",
-              "RelativeToolTip": "..\\Model\\Core\\BasicPlatform.cs",
+              "RelativeToolTip": "..\\..\\Model\\Core\\BasicPlatform.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T11:59:16.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "World.cs",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\World.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Core\\World.cs",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Core\\World.cs",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\World.cs",
-              "RelativeToolTip": "..\\Model\\Core\\World.cs",
+              "RelativeToolTip": "..\\..\\Model\\Core\\World.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAowDYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T12:23:25.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PlatformManager.cs",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\PlatformManager.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Core\\PlatformManager.cs",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Core\\PlatformManager.cs",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\PlatformManager.cs",
-              "RelativeToolTip": "..\\Model\\Core\\PlatformManager.cs",
+              "RelativeToolTip": "..\\..\\Model\\Core\\PlatformManager.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAA3wC0AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T18:30:38.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "GamePage.cs",
-              "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\GamePage.cs",
+              "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\GamePage.cs",
               "RelativeDocumentMoniker": "GamePage.cs",
-              "ToolTip": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\GamePage.cs",
+              "ToolTip": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\GamePage.cs",
               "RelativeToolTip": "GamePage.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAkwGsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -108,35 +106,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IPlatform.cs",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\IPlatform.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Core\\IPlatform.cs",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Core\\IPlatform.cs",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\IPlatform.cs",
-              "RelativeToolTip": "..\\Model\\Core\\IPlatform.cs",
+              "RelativeToolTip": "..\\..\\Model\\Core\\IPlatform.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAiwA4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T18:33:50.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\Player.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Core\\Player.cs",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Core\\Player.cs",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Core\\Player.cs",
-              "RelativeToolTip": "..\\Model\\Core\\Player.cs",
+              "RelativeToolTip": "..\\..\\Model\\Core\\Player.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T11:44:50.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Program.cs",
+              "ToolTip": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,9 +145,9 @@
               "DocumentIndex": 8,
               "Title": "Model.csproj",
               "DocumentMoniker": "C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj",
-              "RelativeDocumentMoniker": "..\\Model\\Model.csproj",
+              "RelativeDocumentMoniker": "..\\..\\Model\\Model.csproj",
               "ToolTip": "C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj",
-              "RelativeToolTip": "..\\Model\\Model.csproj",
+              "RelativeToolTip": "..\\..\\Model\\Model.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-05-21T11:37:52.166Z"

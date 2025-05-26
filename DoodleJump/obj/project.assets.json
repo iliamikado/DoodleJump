@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump.csproj",
+      "projectUniqueName": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\DoodleJump.csproj",
       "projectName": "DoodleJump",
-      "projectPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump.csproj",
+      "projectPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\DoodleJump.csproj",
       "packagesPath": "C:\\Users\\iliam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\obj\\",
+      "outputPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\DoodleJump\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iliam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj"
+            "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Model\\Model.csproj"
             }
           }
         }

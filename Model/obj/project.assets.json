@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\iliam\\source\\repos\\Model\\Model.csproj",
+      "projectPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\iliam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iliam\\source\\repos\\Model\\obj\\",
+      "outputPath": "C:\\Users\\iliam\\source\\repos\\DoodleJump\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iliam\\AppData\\Roaming\\NuGet\\NuGet.Config",
