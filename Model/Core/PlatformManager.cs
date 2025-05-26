@@ -21,13 +21,16 @@ namespace Model.Core
         public void Move(double y)
         {
             top -= y;
-            foreach (var pl in Platforms)
+            for (int i = 0; i < Platforms.Length; i++)
             {
+                var pl = Platforms[i];
                 pl.Move(y);
                 if (pl.Y < 0)
                 {
+                    pl = GetRandomPlatfrom();
                     pl.Y = top;
                     pl.X = GetRandomX();
+                    Platforms[i] = pl;
                     top += STEP;
                 }
             }
@@ -37,7 +40,7 @@ namespace Model.Core
             
             for (int i = 0; i < Platforms.Length; i++)
             {
-                var p = new BasicPlatform();
+                var p = GetRandomPlatfrom();
                 p.X = GetRandomX();
                 p.Y = top;
                 top += STEP;
@@ -50,6 +53,13 @@ namespace Model.Core
         private double GetRandomX()
         {
             return rnd.Next((int) (World.WORLD_WIDTH - IPlatform.WIDTH));
+        }
+
+        private IPlatform GetRandomPlatfrom()
+        {
+            var x = rnd.Next(6);
+            if (x == 5) return new OneJumpPlatform();
+            return new BasicPlatform();
         }
     }
 }

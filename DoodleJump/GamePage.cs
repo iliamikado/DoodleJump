@@ -89,6 +89,7 @@ namespace DoodleJump
             for (int i = 0; i < platformsPics.Length; i++)
             {
                 platformsPics[i].Location = new Point((int) world.Platforms[i].X, (int) (World.WORLD_HEIGHT - world.Platforms[i].Y));
+                platformsPics[i].BackColor = world.Platforms[i].Color;
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Model.Core
         public double X { get; set; }
         public double Y { get; set; }
         public double JumpPower = 500;
+        public virtual Color Color => Color.Green;
 
         public bool IsSteping(Player player)
         {
@@ -26,7 +28,7 @@ namespace Model.Core
             Y -= y;
         }
 
-        public void Step(Player p)
+        public virtual void Step(Player p)
         {
             p.Speed = JumpPower;
         }
