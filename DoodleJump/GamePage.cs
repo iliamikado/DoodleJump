@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,7 +35,7 @@ namespace DoodleJump
 
             // Настройка таймера для вызова функции update
             gameTimer = new System.Windows.Forms.Timer();
-            gameTimer.Interval = (int) (World.Delta * 100);
+            gameTimer.Interval = (int)(World.Delta * 100);
             gameTimer.Tick += Update;
             gameTimer.Start();
 
@@ -45,9 +47,20 @@ namespace DoodleJump
             // Две картинки для отзеркаливания персонажа
             string imagePath = Path.Combine(Application.StartupPath, "assets/player.png");
             var img = Image.FromFile(imagePath);
-            rightImage = (Image) img.Clone();
-            leftImage = (Image) img.Clone();
+            rightImage = (Image)img.Clone();
+            leftImage = (Image)img.Clone();
             leftImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+            // Предсоздание платформ
+            platformsPics = new PictureBox[World.PREPARED_PLATFORMS];
+            for (int i = 0; i < World.PREPARED_PLATFORMS; i++)
+            {
+                var p = new PictureBox();
+                p.Size = new Size((int)IPlatform.WIDTH, (int)IPlatform.HEIGHT);
+                p.BackColor = Color.Green;
+                platformsPics[i] = p;
+                Controls.Add(p);
+            }
 
             // Создание персонажа
             playerIcon = new PlayerIcon();
@@ -56,22 +69,11 @@ namespace DoodleJump
             playerIcon.Show();
             playerIcon.BackColor = Color.Transparent;
             Controls.Add(playerIcon);
-
-            // Предсоздание платформ
-            platformsPics = new PictureBox[World.PREPARED_PLATFORMS];
-            for (int i = 0; i < World.PREPARED_PLATFORMS; i++)
-            {
-                var p = new PictureBox();
-                p.Size = new Size((int) IPlatform.WIDTH, (int) IPlatform.HEIGHT);
-                p.BackColor = Color.Green;
-                platformsPics[i] = p;
-                Controls.Add(p);
-            }
         }
 
         private void GamePage_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Update(object? sender, EventArgs e)
@@ -82,13 +84,13 @@ namespace DoodleJump
 
         private void Redraw()
         {
-            playerIcon.Left = (int) world.Player.X;
-            playerIcon.Top = (int) (World.WORLD_HEIGHT - world.Player.Y - Player.HEIGHT);
+            playerIcon.Left = (int)world.Player.X;
+            playerIcon.Top = (int)(World.WORLD_HEIGHT - world.Player.Y - Player.HEIGHT);
             playerIcon.Image = world.Player.IsMirrored ? leftImage : rightImage;
 
             for (int i = 0; i < platformsPics.Length; i++)
             {
-                platformsPics[i].Location = new Point((int) world.Platforms[i].X, (int) (World.WORLD_HEIGHT - world.Platforms[i].Y));
+                platformsPics[i].Location = new Point((int)world.Platforms[i].X, (int)(World.WORLD_HEIGHT - world.Platforms[i].Y));
                 platformsPics[i].BackColor = world.Platforms[i].Color;
             }
         }
