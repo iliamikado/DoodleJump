@@ -12,6 +12,7 @@ namespace Model.Core
         public IPlatform[] Platforms { get; set; }
         private Random rnd;
         private double top = 100;
+        private bool lastBroken = false;
 
         public PlatformManager(int prepared_platforms)
         {
@@ -40,7 +41,7 @@ namespace Model.Core
             
             for (int i = 0; i < Platforms.Length; i++)
             {
-                var p = GetRandomPlatfrom();
+                var p = new BasicPlatform();
                 p.X = GetRandomX();
                 p.Y = top;
                 top += STEP;
@@ -57,8 +58,15 @@ namespace Model.Core
 
         private IPlatform GetRandomPlatfrom()
         {
-            var x = rnd.Next(6);
-            if (x == 5) return new OneJumpPlatform();
+            var x = rnd.Next(11);
+            if (x == 10 && !lastBroken)
+            {
+                lastBroken = true;
+                return new BrokenPlatfrom();
+            }
+            lastBroken = false;
+            if (x == 9 || x == 8) return new OneJumpPlatform();
+            if (x == 7) return new HighJumpPlatform();
             return new BasicPlatform();
         }
     }
