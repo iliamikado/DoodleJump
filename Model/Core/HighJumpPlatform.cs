@@ -14,7 +14,6 @@ namespace Model.Core
         public override void Step(Player p)
         {
             p.Speed = JumpPower * 2;
-            Y = -400;
         }
     }
 }
