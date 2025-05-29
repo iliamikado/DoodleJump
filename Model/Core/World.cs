@@ -15,6 +15,7 @@ namespace Model.Core
         public const int PREPARED_PLATFORMS = 10;
         public const double GRAVITY = 15;
         public Player Player { get; private set; }
+        public int Score { get; set; }
         public bool Paused { get; set; }
         public IPlatform[] Platforms => platformManager.Platforms;
         private bool toRight = false;
@@ -32,7 +33,7 @@ namespace Model.Core
         }
         public void LoadWorld(int playerX, int playerY, int[] platformsX, int[] platformsY, int score)
         {
-
+            
         }
         public void Update()
         {
