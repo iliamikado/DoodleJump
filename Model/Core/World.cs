@@ -30,6 +30,10 @@ namespace Model.Core
             platformManager = new PlatformManager(PREPARED_PLATFORMS);
             platformManager.SetStartingPlatfroms();
         }
+        public void LoadWorld(int playerX, int playerY, int[] platformsX, int[] platformsY, int score)
+        {
+
+        }
         public void Update()
         {
             if (Paused) return;
