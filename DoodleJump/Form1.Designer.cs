@@ -68,6 +68,8 @@
             // 
             textBox1.Location = new Point(101, 303);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.ScrollBars = ScrollBars.Horizontal;
             textBox1.Size = new Size(200, 27);
             textBox1.TabIndex = 3;
             // 

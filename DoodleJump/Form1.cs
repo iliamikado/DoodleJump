@@ -7,6 +7,7 @@ namespace DoodleJump
         {
             InitializeComponent();
             folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            textBox1.Text = $"{folderPath}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,8 +24,8 @@ namespace DoodleJump
         {
             if (folderDialog.ShowDialog() == DialogResult.OK)
             {
-                string selectedFolder = folderDialog.SelectedPath;
-                MessageBox.Show($"Выбрана папка: {selectedFolder}");
+                folderPath = folderDialog.SelectedPath;
+                textBox1.Text = $"{folderPath}";
             }
         }
     }
