@@ -33,6 +33,7 @@
             button2 = new Button();
             button3 = new Button();
             textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -73,17 +74,28 @@
             textBox1.Size = new Size(200, 27);
             textBox1.TabIndex = 3;
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(101, 336);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Enter file name";
+            textBox2.Size = new Size(200, 27);
+            textBox2.TabIndex = 4;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(382, 553);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +107,6 @@
         private Button button2;
         private Button button3;
         private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

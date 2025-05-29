@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model.Core;
+using Model.Data;
 
 namespace DoodleJump
 {
@@ -22,9 +23,13 @@ namespace DoodleJump
         private Image leftImage;
         private PictureBox[] platformsPics;
         private PlayerIcon playerIcon;
-        public GamePage()
+        private ISerializer serializer;
+        public GamePage(ISerializer sr)
         {
             InitializeComponent();
+
+            // Запоминаем сериалайзер
+            serializer = sr;
 
             // Главное API с логикой
             world = new World();
@@ -122,6 +127,11 @@ namespace DoodleJump
                     world.UnSetRight();
                     break;
             }
+        }
+
+        private void GamePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serializer.Save(world);
         }
     }
     public class PlayerIcon : PictureBox
