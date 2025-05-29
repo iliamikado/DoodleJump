@@ -22,7 +22,5 @@ public class WorldDTO
             PositionPlatformY[i] = (int)world.Platforms[i].Y;
         }
         Score = 0;
-
-
     }
 }
