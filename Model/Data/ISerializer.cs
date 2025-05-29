@@ -6,4 +6,5 @@ public interface ISerializer
 {
     void SetFilePath(string filePath);
     void Save(World world);
+    void Load(World world);
 }

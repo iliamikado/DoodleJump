@@ -9,7 +9,7 @@ public class SerializerXML : Serializer
         var serializer = new XmlSerializer(typeof(WorldDTO));
         using (var writer = new StreamWriter(FilePath))
         {
-            serializer.Serialize(writer, world);
+            serializer.Serialize(writer, new WorldDTO(world));
         }
     }
 
