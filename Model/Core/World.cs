@@ -15,7 +15,8 @@ namespace Model.Core
         public const int PREPARED_PLATFORMS = 10;
         public const double GRAVITY = 15;
         public Player Player { get; private set; }
-        public int Score { get; set; }
+        public int Score => (int)_score / 100;
+        private double _score = 0;
         public bool Paused { get; set; }
         public IPlatform[] Platforms => platformManager.Platforms;
         private bool toRight = false;
@@ -24,16 +25,21 @@ namespace Model.Core
 
         public World()
         {
-            Paused = true;
             Player = new Player();
             Player.X = WORLD_WIDTH / 2;
             Player.Y = 200;
             platformManager = new PlatformManager(PREPARED_PLATFORMS);
+        }
+
+        public void LoadNewWorld()
+        {
             platformManager.SetStartingPlatfroms();
         }
         public void LoadWorld(int playerX, int playerY, int[] platformsX, int[] platformsY, int score)
         {
-            
+            Player.X = playerX; Player.Y = playerY;
+            platformManager.SetPlatforms(platformsX, platformsY);
+            _score = score * 100;
         }
         public void Update()
         {
@@ -48,7 +54,11 @@ namespace Model.Core
             else
             {
                 if (Player.Y < WORLD_HEIGHT / 2) Player.MoveV(Delta * Player.Speed);
-                else platformManager.Move(Delta * Player.Speed);
+                else
+                {
+                    platformManager.Move(Delta * Player.Speed);
+                    _score += Delta * Player.Speed;
+                }
             }
 
             foreach (var platform in Platforms)

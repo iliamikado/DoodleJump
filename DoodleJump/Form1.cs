@@ -5,14 +5,20 @@ namespace DoodleJump
     public partial class Form1 : Form
     {
         private string folderPath;
+        private string fileName;
+        private string format;
+        private string FullPath => Path.Combine(folderPath, fileName + $".{format}");
+
         private ISerializer serializer;
         public Form1()
         {
             InitializeComponent();
-            serializer = new SerializerXML();
+            serializer = new SerializerJSON();
             folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            serializer.SetFilePath(Path.Combine(folderPath, "save.txt"));
-            textBox1.Text = $"{folderPath}";
+            fileName = "save";
+            format = "json";
+            serializer.SetFilePath(FullPath);
+            label2.Text = FullPath;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -20,19 +26,18 @@ namespace DoodleJump
             (new GamePage(serializer)).Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            (new GamePage(serializer)).Show();
-        }
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    (new GamePage(serializer, true)).Show();
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {
             if (folderDialog.ShowDialog() == DialogResult.OK)
             {
                 folderPath = folderDialog.SelectedPath;
-                textBox1.Text = $"{folderPath}";
-                var filename = textBox2.Text + ".txt";
-                serializer.SetFilePath(Path.Combine(folderPath, filename));
+                label2.Text = FullPath;
+                serializer.SetFilePath(FullPath);
             }
         }
 
@@ -43,8 +48,31 @@ namespace DoodleJump
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            var filename = textBox2.Text + ".txt";
-            serializer.SetFilePath(Path.Combine(folderPath, filename));
+            fileName = textBox2.Text;
+            if (fileName == "") fileName = "save";
+            serializer.SetFilePath(FullPath);
+            label2.Text = FullPath;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            (new GamePage(serializer, true)).Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            format = (string) comboBox1.SelectedItem;
+            label2.Text = FullPath;
+            switch (format)
+            {
+                case "json":
+                    serializer = new SerializerJSON();
+                    break;
+                case "xml":
+                    serializer = new SerializerXML();
+                    break;
+            }
+            serializer.SetFilePath(FullPath);
         }
     }
 }

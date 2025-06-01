@@ -51,6 +51,17 @@ namespace Model.Core
             Platforms[0].Y = 100;
         }
 
+        public void SetPlatforms(int[] platformsX, int[] platformsY)
+        {
+            for (int i = 0; i <  platformsX.Length; i++)
+            {
+                Platforms[i] = new BasicPlatform();
+                Platforms[i].X = platformsX[i];
+                Platforms[i].Y = platformsY[i];
+                top = platformsY.OrderByDescending(x => x).ToArray()[0] += STEP;
+            }
+        }
+
         private double GetRandomX()
         {
             return rnd.Next((int) (World.WORLD_WIDTH - IPlatform.WIDTH));

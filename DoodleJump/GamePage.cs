@@ -22,9 +22,9 @@ namespace DoodleJump
         private Image rightImage;
         private Image leftImage;
         private PictureBox[] platformsPics;
-        private PlayerIcon playerIcon;
+        private PictureBox playerIcon;
         private ISerializer serializer;
-        public GamePage(ISerializer sr)
+        public GamePage(ISerializer sr, bool resumeGame=false)
         {
             InitializeComponent();
 
@@ -33,6 +33,8 @@ namespace DoodleJump
 
             // Главное API с логикой
             world = new World();
+            if (resumeGame) sr.Load(world);
+            else world.LoadNewWorld();
 
             // Размеры игрового поля
             Width = World.WORLD_WIDTH;
@@ -68,12 +70,16 @@ namespace DoodleJump
             }
 
             // Создание персонажа
-            playerIcon = new PlayerIcon();
+            playerIcon = new PictureBox();
             playerIcon.Image = img;
             playerIcon.Size = new Size(Player.WIDTH, Player.HEIGHT);
             playerIcon.Show();
             playerIcon.BackColor = Color.Transparent;
+            playerIcon.SizeMode = PictureBoxSizeMode.StretchImage;
             Controls.Add(playerIcon);
+
+            // Score
+            label1.Text = "Score: 0";
         }
 
         private void GamePage_Load(object sender, EventArgs e)
@@ -98,6 +104,8 @@ namespace DoodleJump
                 platformsPics[i].Location = new Point((int)world.Platforms[i].X, (int)(World.WORLD_HEIGHT - world.Platforms[i].Y));
                 platformsPics[i].BackColor = world.Platforms[i].Color;
             }
+
+            label1.Text = $"Score: {world.Score}";
         }
 
         private void MyKeyDown(object? sender, KeyEventArgs e)
@@ -132,24 +140,6 @@ namespace DoodleJump
         private void GamePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             serializer.Save(world);
-        }
-    }
-    public class PlayerIcon : PictureBox
-    {
-        public PlayerIcon()
-        {
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            this.BackColor = Color.Transparent;
-        }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            if (Image != null)
-            {
-                e.Graphics.DrawImage(Image,
-                    new Rectangle(0, 0, this.Width, this.Height),
-                    0, 0, Image.Width, Image.Height,
-                    GraphicsUnit.Pixel);
-            }
         }
     }
 }
