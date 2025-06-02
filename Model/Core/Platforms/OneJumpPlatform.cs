@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Core
+namespace Model.Core.Platforms
 {
     public class OneJumpPlatform : Platform
     {

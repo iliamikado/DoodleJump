@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Core
+namespace Model.Core.Platforms
 {
     public class PlatformManager
     {
@@ -38,7 +38,7 @@ namespace Model.Core
         }
         public void SetStartingPlatfroms()
         {
-            
+
             for (int i = 0; i < Platforms.Length; i++)
             {
                 var p = new BasicPlatform();
@@ -53,7 +53,7 @@ namespace Model.Core
 
         public void SetPlatforms(int[] platformsX, int[] platformsY, string[] platformsType)
         {
-            for (int i = 0; i <  platformsX.Length; i++)
+            for (int i = 0; i < platformsX.Length; i++)
             {
                 IPlatform pl = new BasicPlatform();
                 switch (platformsType[i])
@@ -80,7 +80,7 @@ namespace Model.Core
 
         private double GetRandomX()
         {
-            return rnd.Next((int) (World.WORLD_WIDTH - IPlatform.WIDTH));
+            return rnd.Next((int)(World.WORLD_WIDTH - IPlatform.WIDTH));
         }
 
         private IPlatform GetRandomPlatfrom()

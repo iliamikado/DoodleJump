@@ -17,8 +17,7 @@ namespace DoodleJump
             folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             fileName = "save";
             format = "json";
-            serializer.SetFilePath(FullPath);
-            label2.Text = FullPath;
+            changePath();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,8 +35,7 @@ namespace DoodleJump
             if (folderDialog.ShowDialog() == DialogResult.OK)
             {
                 folderPath = folderDialog.SelectedPath;
-                label2.Text = FullPath;
-                serializer.SetFilePath(FullPath);
+                changePath();
             }
         }
 
@@ -50,8 +48,7 @@ namespace DoodleJump
         {
             fileName = textBox2.Text;
             if (fileName == "") fileName = "save";
-            serializer.SetFilePath(FullPath);
-            label2.Text = FullPath;
+            changePath();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -61,7 +58,7 @@ namespace DoodleJump
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            format = (string) comboBox1.SelectedItem;
+            format = (string)comboBox1.SelectedItem;
             label2.Text = FullPath;
             switch (format)
             {
@@ -72,7 +69,19 @@ namespace DoodleJump
                     serializer = new SerializerXML();
                     break;
             }
-            serializer.SetFilePath(FullPath);
+            changePath();
+        }
+
+        private void changePath()
+        {
+            var exist = serializer.SetFilePath(FullPath);
+            label2.Text = FullPath;
+            button2.Enabled = exist;
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            changePath();
         }
     }
 }

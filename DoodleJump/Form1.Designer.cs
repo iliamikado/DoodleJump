@@ -116,6 +116,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            Activated += Form1_Activated;
             FormClosing += Form1_FormClosing;
             ResumeLayout(false);
             PerformLayout();
