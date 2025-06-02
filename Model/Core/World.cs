@@ -35,10 +35,10 @@ namespace Model.Core
         {
             platformManager.SetStartingPlatfroms();
         }
-        public void LoadWorld(int playerX, int playerY, int[] platformsX, int[] platformsY, int score)
+        public void LoadWorld(int playerX, int playerY, int[] platformsX, int[] platformsY, int score, string[] platformsType)
         {
             Player.X = playerX; Player.Y = playerY;
-            platformManager.SetPlatforms(platformsX, platformsY);
+            platformManager.SetPlatforms(platformsX, platformsY, platformsType);
             _score = score * 100;
         }
         public void Update()

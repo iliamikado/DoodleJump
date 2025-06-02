@@ -19,6 +19,7 @@ public class WorldDTO
         int dlinamassiva = world.Platforms.Length;
         PositionPlatformX = new int[dlinamassiva];
         PositionPlatformY = new int[dlinamassiva];
+        PlatformTypes = new string[dlinamassiva];
         for (int i = 0; i < dlinamassiva; i++)
         {
             PositionPlatformX[i] = (int)world.Platforms[i].X;
@@ -27,7 +28,7 @@ public class WorldDTO
         Score = world.Score;
         for (int i = 0; i < dlinamassiva; i++)
         {
-            PlatformTypes[i] = world.Platforms[i].Type.ToString();
+            PlatformTypes[i] = world.Platforms[i].GetType().Name;
         }
     }
 }

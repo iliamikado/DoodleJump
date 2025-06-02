@@ -51,11 +51,27 @@ namespace Model.Core
             Platforms[0].Y = 100;
         }
 
-        public void SetPlatforms(int[] platformsX, int[] platformsY)
+        public void SetPlatforms(int[] platformsX, int[] platformsY, string[] platformsType)
         {
             for (int i = 0; i <  platformsX.Length; i++)
             {
-                Platforms[i] = new BasicPlatform();
+                IPlatform pl = new BasicPlatform();
+                switch (platformsType[i])
+                {
+                    case "BasicPlatform":
+                        pl = new BasicPlatform();
+                        break;
+                    case "OneJumpPlatform":
+                        pl = new OneJumpPlatform();
+                        break;
+                    case "HighJumpPlatform":
+                        pl = new HighJumpPlatform();
+                        break;
+                    case "BrokenPlatfrom":
+                        pl = new BrokenPlatfrom();
+                        break;
+                }
+                Platforms[i] = pl;
                 Platforms[i].X = platformsX[i];
                 Platforms[i].Y = platformsY[i];
                 top = platformsY.OrderByDescending(x => x).ToArray()[0] += STEP;
