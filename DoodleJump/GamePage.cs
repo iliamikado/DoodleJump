@@ -34,7 +34,16 @@ namespace DoodleJump
 
             // Главное API с логикой
             world = new World();
-            if (resumeGame) sr.Load(world);
+            if (resumeGame)
+            {
+                try
+                {
+                    sr.Load(world);
+                } catch
+                {
+                    world.LoadNewWorld();
+                }
+            }
             else world.LoadNewWorld();
 
             // Размеры игрового поля
