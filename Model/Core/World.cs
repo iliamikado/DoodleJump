@@ -51,10 +51,10 @@ namespace Model.Core
             Player.MoveH(horisontMove * Delta);
 
             Player.Speed -= GRAVITY;
-            if (Player.Speed < 0) Player.MoveV(Delta * Player.Speed);
+            if (Player.Speed < 0) Player += Delta * Player.Speed;
             else
             {
-                if (Player.Y < WORLD_HEIGHT / 2) Player.MoveV(Delta * Player.Speed);
+                if (Player.Y < WORLD_HEIGHT / 2) Player += Delta * Player.Speed;
                 else
                 {
                     platformManager.Move(Delta * Player.Speed);

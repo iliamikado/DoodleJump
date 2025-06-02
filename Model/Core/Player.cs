@@ -21,9 +21,20 @@ namespace Model.Core
             X += x;
         }
 
-        public void MoveV(double y)
+        private void MoveV(double y)
         {
             Y += y;
+        }
+
+        public static Player operator +(Player p, double y)
+        {
+            p.MoveV(y);
+            return p;
+        }
+
+        public override string ToString()
+        {
+            return $"X: {X}; Y: {Y}; Speed: {Speed}";
         }
     }
 }
