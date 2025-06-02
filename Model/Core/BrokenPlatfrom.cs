@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Core
 {
-    public class BrokenPlatfrom : BasicPlatform
+    public class BrokenPlatfrom : Platform
     {
         public override Color Color => Color.Brown;
 

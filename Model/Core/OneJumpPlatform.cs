@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Core
 {
-    public class OneJumpPlatform : BasicPlatform
+    public class OneJumpPlatform : Platform
     {
         public override Color Color => Color.Gray;
 

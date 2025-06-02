@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Core
 {
-    public class HighJumpPlatform : BasicPlatform
+    public class HighJumpPlatform : Platform
     {
         public override Color Color => Color.Pink;
 
