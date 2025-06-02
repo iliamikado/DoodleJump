@@ -20,12 +20,13 @@ public class SerializerXML : Serializer
         using (var reader = new StreamReader(FilePath))
         {
             var deser = (WorldDTO)serializer.Deserialize(reader);
-            var PlayerX = deser.PosistionPlayerX;
-            var PlayerY = deser.PosistionPlayerY;
+            var PlayerX = deser.PositionPlayerX;
+            var PlayerY = deser.PositionPlayerY;
             var PlatformX = deser.PositionPlatformX;
             var PlatformY = deser.PositionPlatformY;
             var Score = deser.Score;
-            world.LoadWorld(PlayerX, PlayerY, PlatformX,PlatformY,Score);
+            var Platformtypes = deser.PlatformTypes;
+            world.LoadWorld(PlayerX, PlayerY, PlatformX,PlatformY,Score,Platformtypes);
         }
         
     }  

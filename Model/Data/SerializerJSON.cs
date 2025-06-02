@@ -16,12 +16,13 @@ public class SerializerJSON : Serializer
     {
         var content = File.ReadAllText(FilePath);
         var deser = JObject.Parse(content);
-        var PlayerX = deser["PosistionPlayerX"].ToObject<int>();
+        var PlayerX = deser["PositionPlayerX"].ToObject<int>();
         var PlayerY = deser["PositionPlayerY"].ToObject<int>();
         var PlatformX = deser["PositionPlatformX"].ToObject<int[]>();
         var PlatformY = deser["PositionPlatformY"].ToObject<int[]>();
         var Score = deser["Score"].ToObject<int>();
-        world.LoadWorld(PlayerX, PlayerY, PlatformX,PlatformY,Score);
+        var Platformtypes = deser["PlatformTypes"].ToObject<string[]>();
+        world.LoadWorld(PlayerX, PlayerY, PlatformX,PlatformY,Score,Platformtypes);
         
     }
     
