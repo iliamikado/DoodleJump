@@ -1,4 +1,5 @@
 using Model.Data;
+using System.Text;
 
 namespace DoodleJump
 {
@@ -46,7 +47,17 @@ namespace DoodleJump
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            fileName = textBox2.Text;
+            var sb = new StringBuilder();
+            for (int i = 0; i < textBox2.Text.Length; i++)
+            {
+                var c = textBox2.Text[i];
+                if (char.IsDigit(c) || char.IsLetter(c))
+                {
+                    sb.Append(c);
+                }
+            }
+            fileName = sb.ToString();
+            textBox2.Text = sb.ToString();
             if (fileName == "") fileName = "save";
             changePath();
         }
@@ -58,7 +69,7 @@ namespace DoodleJump
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            format = (string)comboBox1.SelectedItem;
+            format = (string) comboBox1.SelectedItem;
             label2.Text = FullPath;
             switch (format)
             {

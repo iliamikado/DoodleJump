@@ -72,6 +72,7 @@
             // textBox2
             // 
             textBox2.Location = new Point(185, 257);
+            textBox2.MaxLength = 10;
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Enter file name";
             textBox2.Size = new Size(116, 27);
